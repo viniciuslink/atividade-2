@@ -1,12 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>minha atividade</title>
-  <script src="atividade2.js"></script>
+<title>teste atividade 2</title>
 </head>
 <body>
+
+<p>Clique para exibir.</p>
+
+<button onclick="myFunction()">Cadastro de evento</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction()
+{
+var x;
+
+
+
+const diahoje=18;
+//var dia = 19;
+//const idade=19;
+var participantes=0;
+var data = new Date();
+var dia = String(data.getDate()).padStart(2, '0');
+
+var nomeparticipante =prompt("digite seu nome");
+var diaevento =prompt("Digite o dia de hoje");
+
+if(diaevento>dia){
+    if(participantes<=100){
+
+      var idade=prompt("Digite sua idade:");
+
+        if(idade>=18){
+               console.log("você pode se inscrever");
+            participantes=participantes+1;
+            document.write(participantes + " - " + nomeparticipante + "\n");
+
+            
+        }
+        else
+        
+        document.write("idade não permitida");     }
+    else
+    document.write("não há mais vagas");
+}
+else
+document.write("data inválida");    
+    
+}
+</script>
 
 </body>
 </html>
